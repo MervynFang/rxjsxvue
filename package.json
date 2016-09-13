@@ -1,0 +1,26 @@
+{
+  "name": "rxjsxvue",
+  "version": "1.0.0",
+  "description": "rxjsxvue",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "rx": "^4.1.0",
+    "vue": "^2.0.0-rc.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MervynFang/rxjsxvue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MervynFang/rxjsxvue/issues"
+  },
+  "homepage": "https://github.com/MervynFang/rxjsxvue#readme"
+}
