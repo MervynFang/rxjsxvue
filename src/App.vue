@@ -1,0 +1,26 @@
+<template lang="html">
+  <div>
+    <div class="rerer">
+      fasdfas
+    </div>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      a: 'ha123'
+    }
+  },
+  methods: {},
+  components: {}
+}
+</script>
+
+<style lang="css">
+.rerer { color: #ca699d; }
+</style>
