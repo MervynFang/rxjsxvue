@@ -9,7 +9,7 @@
 export default {
   data () {
     return {
-      b: 2
+      b: 'this is a vue 2.0 jsx demo page'
     }
   },
   render (h) {
