@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": "vue",
+  # lint for html and .vue file
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    "no-trailing-spaces": 0,
+    "eol-last": 0,
+  }
+}

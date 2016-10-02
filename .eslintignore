@@ -1,0 +1,5 @@
+coverage
+use dist file
+dist
+node_modules
+test
