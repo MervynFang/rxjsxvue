@@ -33,11 +33,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 .two {
   color: #aed123;
 }
 .haha {
   display: block;
+  color: #e4729d;
 }
 </style>
