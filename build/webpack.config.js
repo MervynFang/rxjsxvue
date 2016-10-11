@@ -85,8 +85,7 @@ const baseConfig = {
       name: 'vendor',
       filename: 'client-vendor-bundle.js'
     })
-  ],
-  devtool: 'source-map'
+  ]
 }
 
 let HWP = {

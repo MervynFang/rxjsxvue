@@ -11,9 +11,10 @@ const clientConfig = require('./build/webpack.config')
 const app = express()
 
 if (isProd) {
-  
+  app.use('/', express.static(resolve('./dist')))
 } else {
   clientConfig.entry.app = ['webpack-hot-middleware/client', clientConfig.entry.app]
+  clientConfig.devtool = 'source-map'
   clientConfig.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
@@ -32,7 +33,6 @@ if (isProd) {
   app.use(require('webpack-hot-middleware')(clientCompiler))
 }
 
-app.use('/dist', express.static(resolve('./dist')))
 app.use(favicon(resolve('./src/assets/logo.png')))
 
 const port = process.env.PORT || 3601
