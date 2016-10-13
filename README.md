@@ -1,5 +1,5 @@
 # rxjsxvue
-### dependencies
+### Dependencies
 - rxjs 5.0.x
 - vue 2.0.x
 - vue-rx
