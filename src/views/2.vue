@@ -13,6 +13,11 @@ export default {
       d: [10, 20, 30]
     }
   },
+  methods: {
+    eventinjsx (data) {
+      console.log(data)
+    }
+  },
   render (h) {
     const coljsx = []
     this.d.map((val, index) => {
@@ -26,6 +31,7 @@ export default {
           {/* we dont need v-for directive here with jsx writing style */}
           {coljsx}
         </ul>
+        <button on-click={this.eventinjsx.bind(this, 1)}>haha</button>
         <router-link to='/hello' class={'haha'}>to 1</router-link>
       </div>
     )
