@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted () {
-    Rx.Observable.fromEvent(document.querySelector('.btn'), 'click').subscribe(() => {
+    this.$subscribeTo(Rx.Observable.fromEvent(document.querySelector('.btn'), 'click'), () => {
       console.log(123)
     })
   }
