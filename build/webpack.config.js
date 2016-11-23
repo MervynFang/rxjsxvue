@@ -42,10 +42,6 @@ const baseConfig = {
         loader: 'vue'
       },
       {
-        test: /\.css$/,
-        loader: 'style!css'
-      },
-      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'url',
         query: {

@@ -17,7 +17,11 @@ const aaa = Rx.Observable.from([10, 20, 30]).map(val => val)
 export default {
   data () {
     return {
-      a: 'this is a rxjs x vue use vue-rx demo page',
+      a: 'this is a rxjs x vue use vue-rx demo page'
+    }
+  },
+  subscriptions () {
+    return {
       b: aaa
     }
   },
