@@ -41,7 +41,7 @@ export default {
 
 <style lang="css" scoped>
 .two {
-  color: #aed123;
+  color: #0ed123;
 }
 .haha {
   display: block;

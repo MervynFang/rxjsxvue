@@ -22,5 +22,7 @@ export default {
 </script>
 
 <style lang="css">
-.rerer { color: #ca699d; }
+.rerer {
+  color: #ca699d; 
+}
 </style>
