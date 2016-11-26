@@ -45,13 +45,10 @@
     "dist": "cross-env NODE_ENV=production node server.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js --progress --hide-modules"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MervynFang/rxjsxvue.git"
-  },
+  "repository": "https://github.com/MervynFang/rxjsxvue.git",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "FangMervyn <mervynfang@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MervynFang/rxjsxvue/issues"
   },
