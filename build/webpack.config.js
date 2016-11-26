@@ -11,8 +11,8 @@ const baseConfig = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    // publicPath: '/dist/',
-    filename: 'rxjsxvue-bundle.js'
+    publicPath: '/dist/',
+    filename: '[name]-[chunkhash:10].js'
   },
   module: {
     // preloader can lint dependency 
@@ -78,8 +78,7 @@ const baseConfig = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'client-vendor-bundle.js'
+      name: 'vendor'
     })
   ]
 }
