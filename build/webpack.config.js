@@ -11,7 +11,6 @@ const baseConfig = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/',
     filename: '[name]-[chunkhash:10].js'
   },
   module: {
@@ -102,7 +101,7 @@ if (process.env.NODE_ENV === 'production') {
   }
 
   baseConfig.plugins.push(
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles-[contenthash:10].css'),
     // this is needed in webpack 2 for minifying CSS
     // new webpack.LoaderOptionsPlugin({
     //   minimize: true
