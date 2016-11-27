@@ -1,6 +1,6 @@
 {
   "name": "rxjsxvue",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "rxjsxvue",
   "main": "index.js",
   "dependencies": {

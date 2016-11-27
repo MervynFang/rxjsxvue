@@ -19,7 +19,8 @@ const baseConfig = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name]-[hash:10].js'
+    filename: process.env.NODE_ENV === 'production' 
+      ? '[name]-[chunkhash:10].js' : '[name].js'
   },
   module: {
     rules: [
