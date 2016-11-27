@@ -36,6 +36,7 @@
     "opn": "^4.0.2",
     "postcss-loader": "^1.1.1",
     "shelljs": "^0.7.5",
+    "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.1",
     "vue-template-compiler": "^2.1.3",
