@@ -9,12 +9,12 @@ export default new Router({
     {
       path: '/hello',
       name: 'hello',
-      component: resolve => require(['../views/1.vue'], resolve)
+      component: () => System.import('../views/1.vue')
     },
     {
       path: '/hi',
       name: 'hi',
-      component: resolve => require(['../views/2.vue'], resolve)
+      component: () => System.import('../views/2.vue')
     },
     {
       path: '*',

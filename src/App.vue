@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div class="rerer">
-      fasdfas
+      vue2 webpack2
     </div>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
@@ -23,6 +23,6 @@ export default {
 
 <style lang="css">
 .rerer {
-  color: #ca699d; 
+  color: #ca699d;
 }
 </style>

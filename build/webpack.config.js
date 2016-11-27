@@ -1,8 +1,16 @@
 const path = require('path')
-const projectRoot = path.resolve(__dirname, '../')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const resolve = file => path.resolve(__dirname, file)
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const vueConfig = {
+  postcss: [
+    require('autoprefixer')({
+      browsers: ['last 3 versions']
+    })
+  ]
+}
 
 const baseConfig = {
   entry: {
@@ -11,65 +19,54 @@ const baseConfig = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name]-[chunkhash:10].js'
+    filename: '[name]-[hash:10].js'
   },
   module: {
-    // preloader can lint dependency 
-    // other please run npm run lint in terminal
-    preLoaders: [
+    rules: [
       {
         test: /\.vue$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre'
       },
       {
         test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      }
-    ],
-    loaders: [
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader',
+        options: vueConfig
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'url',
+        test: /\.(png|jpg|gif|svg|ttf|woff|eot)$/,
+        loader: 'url-loader',
         query: {
           limit: 10000,
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.css$/,
+        loader: process.env.NODE_ENV === 'production' 
+          ? ExtractTextPlugin.extract({
+            loader: ['css-loader', 'postcss-loader'],
+            fallbackLoader: 'style-loader'
+          }) 
+          : ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
   },
-  vue: {
-    postcss: [
-      require('autoprefixer')({
-        browsers: ['last 3 versions']
-      })
-    ],
-    loaders: {
-      
-    }
-  },
-  eslint: {
-    
-  },
-  resolveLoader: {
-    root: path.join(__dirname, '../node_modules')
-  },
   resolve: {
-    extensions: ['', '.js', '.vue', '.ejs', '.json', '.css'],
     alias: {
-      
+      'src': resolve('../src')
     }
   },
   plugins: [
@@ -96,16 +93,19 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
   
-  baseConfig.vue.loaders = {
-    css: ExtractTextPlugin.extract('vue-style-loader', 'css')
+  vueConfig.loaders = {
+    css: ExtractTextPlugin.extract({
+      loader: 'css-loader',
+      fallbackLoader: 'vue-style-loader'
+    })
   }
 
   baseConfig.plugins.push(
     new ExtractTextPlugin('styles-[contenthash:10].css'),
     // this is needed in webpack 2 for minifying CSS
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true
-    // }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    }),
     // minify JS
     new webpack.optimize.UglifyJsPlugin({
       compress: {

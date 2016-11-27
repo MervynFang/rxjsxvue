@@ -7,6 +7,7 @@ const favicon = require('serve-favicon')
 
 const webpack = require('webpack')
 const clientConfig = require('./build/webpack.config')
+const opn = require('opn')
 
 const app = express()
 
@@ -38,4 +39,7 @@ app.use(favicon(resolve('./src/assets/logo.png')))
 const port = process.env.PORT || 3601
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
+  const uri = 'http://localhost:' + port
+  // will directly open the uri in default browser
+  opn(uri)
 })
