@@ -22,8 +22,6 @@ export default {
 </script>
 
 <style lang="css">
-@import "./assets/css/reset.css";
-
 .rerer {
   color: #ca699d;
 }

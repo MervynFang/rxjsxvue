@@ -4,6 +4,8 @@ import router from './router'
 import Rx from 'rxjs/Rx'
 import VueRx from 'vue-rx'
 
+import './assets/css/reset.css'
+
 Vue.use(VueRx, Rx)
 
 new Vue({
