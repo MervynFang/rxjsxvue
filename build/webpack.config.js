@@ -15,7 +15,7 @@ const vueConfig = {
 const baseConfig = {
   entry: {
     app: './src/app.js',
-    vendor: ['vue', 'vue-router']
+    vendor: ['vue', 'vue-router', 'rxjs', 'vue-rx']
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
