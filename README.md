@@ -24,7 +24,7 @@ Build for production
 ```
 npm run lint
 ```
-Run ealint
+Run eslint
 
 ```
 npm run dist
