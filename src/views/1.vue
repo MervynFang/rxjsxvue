@@ -12,7 +12,7 @@
 <script>
 import Rx from 'rxjs/Rx'
 
-const aaa = Rx.Observable.from([10, 20, 30]).map(val => val)
+const aaa = Rx.Observable.from([10, 20, 30]).map(val => val).toArray()
 
 export default {
   data () {
