@@ -12,6 +12,7 @@
 <script>
 import Rx from 'rxjs/Rx'
 
+// change ob to array, or it will get the last value
 const aaa = Rx.Observable.from([10, 20, 30]).map(val => val).toArray()
 
 export default {

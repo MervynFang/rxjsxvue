@@ -31,6 +31,7 @@ export default {
           {/* we dont need v-for directive here with jsx writing style */}
           {coljsx}
         </ul>
+        {/* method here muust use prefix on- */}
         <button on-click={this.eventinjsx.bind(this, 1)}>haha</button>
         <router-link to='/hello' class={'haha'}>to 1</router-link>
       </div>
