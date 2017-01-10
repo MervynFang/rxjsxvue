@@ -6,11 +6,11 @@
   "dependencies": {
     "axios": "^0.15.3",
     "express": "^4.14.0",
-    "rxjs": "^5.0.2",
+    "rxjs": "^5.0.3",
     "serve-favicon": "^2.3.2",
     "vue": "^2.1.8",
     "vue-router": "^2.1.1",
-    "vue-rx": "^2.2.0",
+    "vue-rx": "^2.2.1",
     "vue-server-renderer": "^2.1.8"
   },
   "devDependencies": {

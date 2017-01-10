@@ -3643,9 +3643,9 @@ rx-lite@^3.1.2:
   version "3.1.2"
   resolved "http://registry.npm.taobao.org/rx-lite/download/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
-rxjs@^5.0.2:
-  version "5.0.2"
-  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-5.0.2.tgz#cc6513756daa93cab4085c1b5a19a3e28fb6c6bf"
+rxjs@^5.0.3:
+  version "5.0.3"
+  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-5.0.3.tgz#fc8bdf464ebf938812748e4196788f392fef9754"
   dependencies:
     symbol-observable "^1.0.1"
 
@@ -4005,16 +4005,7 @@ typedarray@~0.0.5:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-uglify-js@2.7.x:
-  version "2.7.4"
-  resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-2.7.4.tgz#a295a0de12b6a650c031c40deb0dc40b14568bd2"
-  dependencies:
-    async "~0.2.6"
-    source-map "~0.5.1"
-    uglify-to-browserify "~1.0.0"
-    yargs "~3.10.0"
-
-uglify-js@^2.7.5:
+uglify-js@2.7.x, uglify-js@^2.7.5:
   version "2.7.5"
   resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-2.7.5.tgz#4612c0c7baaee2ba7c487de4904ae122079f2ca8"
   dependencies:
@@ -4151,9 +4142,9 @@ vue-router@^2.1.1:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/vue-router/download/vue-router-2.1.1.tgz#10c31bbdcb6da92bd3e0223fa12345e73018625a"
 
-vue-rx@^2.2.0:
-  version "2.2.0"
-  resolved "http://registry.npm.taobao.org/vue-rx/download/vue-rx-2.2.0.tgz#27a6e25df8937a1cf0c15b795ebd97345cfe724f"
+vue-rx@^2.2.1:
+  version "2.2.1"
+  resolved "http://registry.npm.taobao.org/vue-rx/download/vue-rx-2.2.1.tgz#68c693dc682d9a78ac6612e4860870e765cb4ea2"
 
 vue-server-renderer@^2.1.8:
   version "2.1.8"
