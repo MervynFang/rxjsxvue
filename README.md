@@ -8,25 +8,27 @@
 
 ```
 npm install
+// or
+yarn / yarn install
 ```
 Install dependency
 
 ```
-npm run dev
+npm / yarn run dev
 ```
 Development mode `open http://localhost:3600 in Browser`
 
 ```
-npm run build
+npm / yarn run build
 ```
 Build for production
 
 ```
-npm run lint
+npm / yarn run lint
 ```
 Run eslint
 
 ```
-npm run dist
+npm / yarn run dist
 ```
 Production mode `open http://localhost:3601 in Browser`
