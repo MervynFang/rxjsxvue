@@ -34,6 +34,7 @@ node_modules/
 .npm/
 npm-debug.log
 .sass-cache/
+yarn-error.log
 
 # BUCK
 buck-out/

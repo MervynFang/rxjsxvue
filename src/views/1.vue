@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="one">
     {{a}}
-    <ul v-for="val in b">
-      <li>{{val}}</li>
+    <ul>
+      <li v-for="val in b">{{val}}</li>
     </ul>
     <button type="button" name="button" class="btn">click log</button>
     <router-link to="/hi">to 2</router-link>
@@ -13,7 +13,7 @@
 import Rx from 'rxjs/Rx'
 
 // change ob to array, or it will get the last value
-const aaa = Rx.Observable.from([10, 20, 30]).map(val => val).toArray()
+const aaa = Rx.Observable.from([1, 2, 3]).map(val => val).toArray()
 
 export default {
   data () {
