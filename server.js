@@ -18,7 +18,7 @@ if (isProd) {
   clientConfig.devtool = 'source-map'
   clientConfig.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   )
 
   const clientCompiler = webpack(clientConfig)
