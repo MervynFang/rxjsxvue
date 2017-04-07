@@ -45,3 +45,5 @@ android/keystores/debug.keystore
 *.keystore
 
 coverage/
+
+.svn/
