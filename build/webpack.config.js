@@ -58,8 +58,8 @@ const baseConfig = {
         test: /\.css$/,
         loader: process.env.NODE_ENV === 'production' 
           ? ExtractTextPlugin.extract({
-            loader: ['css-loader', 'postcss-loader'],
-            fallbackLoader: 'style-loader'
+            use: ['css-loader', 'postcss-loader'],
+            fallback: 'style-loader'
           }) 
           : ['style-loader', 'css-loader', 'postcss-loader']
       }
@@ -96,8 +96,8 @@ if (process.env.NODE_ENV === 'production') {
   
   vueConfig.loaders = {
     css: ExtractTextPlugin.extract({
-      loader: 'css-loader',
-      fallbackLoader: 'vue-style-loader'
+      use: 'css-loader',
+      fallback: 'vue-style-loader'
     })
   }
 
