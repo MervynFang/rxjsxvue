@@ -107,6 +107,7 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     // minify JS
     new webpack.optimize.UglifyJsPlugin({
       compress: {

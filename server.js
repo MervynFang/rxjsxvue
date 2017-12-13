@@ -2,18 +2,21 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const path = require('path')
 const resolve = file => path.resolve(__dirname, file)
-const express = require('express')
-const favicon = require('serve-favicon')
 
 const webpack = require('webpack')
 const clientConfig = require('./build/webpack.config')
 const opn = require('opn')
+const { devMiddleware, hotMiddleware } = require('koa-webpack-middleware')
 
-const app = express()
+const Koa = require('koa')
+const app = new Koa()
+const serve = require('koa-static')
+const favicon = require('koa-favicon')
 
 if (isProd) {
-  app.use('/', express.static(resolve('./dist')))
+  app.use(serve(resolve('./dist')))
 } else {
+  app.use(serve(resolve('./')))
   clientConfig.entry.app = ['webpack-hot-middleware/client', clientConfig.entry.app]
   clientConfig.devtool = 'source-map'
   clientConfig.plugins.push(
@@ -23,7 +26,7 @@ if (isProd) {
 
   const clientCompiler = webpack(clientConfig)
 
-  app.use(require('webpack-dev-middleware')(clientCompiler, {
+  app.use(devMiddleware(clientCompiler, {
     publicPath: clientConfig.output.publicPath,
     stats: {
       colors: true,
@@ -31,7 +34,7 @@ if (isProd) {
     }
   }))
   
-  app.use(require('webpack-hot-middleware')(clientCompiler))
+  app.use(hotMiddleware(clientCompiler))
 }
 
 app.use(favicon(resolve('./src/assets/logo.png')))
